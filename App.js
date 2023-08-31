@@ -1,7 +1,4 @@
-import { StatusBar } from 'expo-status-bar';
-import { Text, TouchableOpacity, View } from 'react-native';
-import tw from 'twrnc'
-import Navigation from './navigation';
+import Navigation from './navigation/index';
 
 export default function App() {
   return (
