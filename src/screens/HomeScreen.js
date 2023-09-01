@@ -6,17 +6,20 @@ import {
 } from "react-native-responsive-screen";
 import { MagnifyingGlassIcon } from 'react-native-heroicons/outline';
 import Categories from '../components/categories';
+import Avatar from "../../assets/images/avatar.png"
+import SortCategories from '../components/sortCategories';
+import Destination from '../components/destination';
 
 const ios = Platform.OS === 'ios';
 const topMargin = ios ? 'mt-3' : 'mt-10';
 export default function HomeScreen() {
   return (
-    <SafeAreaView>
-      <ScrollView showsVerticalScrollIndicator={false} className="space-y-6">
+    <SafeAreaView className="bg-white w-full h-full">
+      <ScrollView showsVerticalScrollIndicator={false} className="space-y-6 w-full">
         <View className="mx-5 flex-row justify-between items-center mb-10">
           <Text style={{ fontSize: wp(7)}} className="font-bold text-neutral-700">Let's Discover</Text>
           <TouchableOpacity>
-            <Image source={require("../assets/images/avatar.png")} style={{ height: wp(12), width: wp(12)}} />
+            <Image source={Avatar} style={{ height: wp(12), width: wp(12)}} />
           </TouchableOpacity>
         </View>
 
@@ -35,6 +38,14 @@ export default function HomeScreen() {
         {/* categories */}
         <View className="mb-4">
           <Categories />
+        </View>
+
+        <View className="mb-4">
+          <SortCategories />
+        </View>
+
+        <View>
+          <Destination />
         </View>
       </ScrollView>
     </SafeAreaView>

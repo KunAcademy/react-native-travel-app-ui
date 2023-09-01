@@ -13,17 +13,17 @@ export default function Welcome() {
   return (
     <View className="flex-1 flex justify-end">
       <Image
-        source={require("../assets/images/welcome.png")}
+        source={require("../../assets/images/welcome.png")}
         className="w-full h-full absolute"
       />
       <View className="p-5 pb-10 space-y-8">
-      <LinearGradient
+      {/* <LinearGradient
           colors={["transparent", "rgba(3, 105, 161, 0.8)"]}
           style={{ width: wp(100), height: hp(60) }}
           start={{ x: 0.5, y: 0 }}
           end={{ x: 0.5, y: 1 }}
           className="absolute bottom-0"
-        />
+        /> */}
         <View className="space-y-3">
           <Text
             className="text-white font-bold text-5xl"
